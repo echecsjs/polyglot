@@ -1,0 +1,10 @@
+name: 🧪 Test
+
+on:
+  pull_request:
+  workflow_call:
+
+jobs:
+  test:
+    uses: echecsjs/.github/.github/workflows/test.yml@main
+    secrets: inherit

@@ -1,0 +1,87 @@
+{
+  "author": "Adrian de la Rosa <adrian@delarosab.me>",
+  "bugs": {
+    "url": "https://github.com/echecsjs/polyglot/issues"
+  },
+  "description": "Read and query Polyglot opening book (.bin) files. Zero dependencies, strict TypeScript.",
+  "devDependencies": {
+    "@echecs/position": "^4.0.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.8.0",
+    "@typescript-eslint/parser": "^8.57.0",
+    "@vitest/coverage-v8": "^4.1.0",
+    "@vitest/eslint-plugin": "^1.6.12",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-unicorn": "^64.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.2",
+    "prettier": "^3.8.1",
+    "tsdown": "^0.22.0",
+    "typedoc": "^0.28.17",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.57.0",
+    "vitest": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "/dist/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "homepage": "https://polyglot.echecs.dev",
+  "keywords": [
+    "chess",
+    "no-dependencies",
+    "opening-book",
+    "polyglot",
+    "typescript"
+  ],
+  "license": "MIT",
+  "name": "@echecs/polyglot",
+  "packageManager": "pnpm@10.33.0",
+  "peerDependencies": {
+    "@echecs/position": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@echecs/position": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/echecsjs/polyglot.git"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "docs": "typedoc",
+    "format": "pnpm run format:ci --write",
+    "format:ci": "prettier -l \"**/*.+(css|js|json|jsx|md|mjs|mts|ts|tsx|yml|yaml)\"",
+    "lint": "pnpm run lint:style && pnpm run lint:types",
+    "lint:ci": "pnpm run lint:style --max-warnings 0 && pnpm run lint:types",
+    "lint:style": "eslint \"src/**/*.{ts,tsx}\" \"*.mjs\" --fix",
+    "lint:types": "tsc --noEmit --project tsconfig.json",
+    "prepare": "husky && pnpm run build",
+    "test": "vitest run",
+    "test:coverage": "pnpm run test --coverage",
+    "test:watch": "pnpm run test --watch"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "version": "0.1.0"
+}

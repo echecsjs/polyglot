@@ -1,0 +1,16 @@
+name: 📚 Docs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  pages: write
+
+jobs:
+  docs:
+    uses: echecsjs/.github/.github/workflows/docs.yml@main
+    secrets: inherit

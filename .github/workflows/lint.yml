@@ -1,0 +1,9 @@
+name: ⬣ Lint
+
+on:
+  pull_request:
+  workflow_call:
+
+jobs:
+  lint:
+    uses: echecsjs/.github/.github/workflows/lint.yml@main

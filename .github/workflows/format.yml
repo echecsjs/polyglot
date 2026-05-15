@@ -1,0 +1,9 @@
+name: 👔 Format
+
+on:
+  pull_request:
+  workflow_call:
+
+jobs:
+  format:
+    uses: echecsjs/.github/.github/workflows/format.yml@main
