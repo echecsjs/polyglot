@@ -52,8 +52,7 @@ Look up all book moves for a position.
 
 ### `Entry`
 
-Extends [`Move`](https://github.com/echecsjs/position) from
-`@echecs/position`:
+Extends [`Move`](https://github.com/echecsjs/position) from `@echecs/position`:
 
 | Field       | Type                 | Description                                 |
 | ----------- | -------------------- | ------------------------------------------- |

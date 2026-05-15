@@ -17,11 +17,7 @@ function encodeSquare(square: string): number {
   return rank * 8 + file;
 }
 
-function encodeMove(
-  from: string,
-  to: string,
-  promotion = 0,
-): number {
+function encodeMove(from: string, to: string, promotion = 0): number {
   return (encodeSquare(from) << 6) | encodeSquare(to) | (promotion << 12);
 }
 
@@ -78,4 +74,6 @@ for (const entry of entries) {
 
 const outPath = nodePath.resolve(import.meta.dirname!, 'test.bin');
 writeFileSync(outPath, result);
-console.log(`Wrote ${entries.length} entries (${result.byteLength} bytes) to ${outPath}`);
+console.log(
+  `Wrote ${entries.length} entries (${result.byteLength} bytes) to ${outPath}`,
+);

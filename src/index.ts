@@ -17,10 +17,10 @@ const PROMOTIONS: Record<number, PromotionPieceType> = {
  * This map translates them to standard king-destination squares.
  */
 const CASTLING: Record<string, Square> = {
-  'e1a1': 'c1',
-  'e1h1': 'g1',
-  'e8a8': 'c8',
-  'e8h8': 'g8',
+  e1a1: 'c1',
+  e1h1: 'g1',
+  e8a8: 'c8',
+  e8h8: 'g8',
 };
 
 interface Entry extends Move {

@@ -4,7 +4,11 @@ import { describe, expect, it } from 'vitest';
 
 import { lookup } from '../index.js';
 
-const FIXTURE_PATH = nodePath.resolve(import.meta.dirname ?? '', 'fixtures', 'test.bin');
+const FIXTURE_PATH = nodePath.resolve(
+  import.meta.dirname ?? '',
+  'fixtures',
+  'test.bin',
+);
 const book = new Uint8Array(readFileSync(FIXTURE_PATH));
 
 describe('lookup', () => {
